@@ -23,6 +23,11 @@ public class UserRequestDTO {
     @Email(message = "Email should be valid")
     private String email;
 
+    @Size(min = 6, max = 100, message = "Password must be between 6 and 100 characters")
+    private String password;
+
+    private String role;
+
     @NotNull(message = "Age is required")
     @Min(value = 1, message = "Age must be greater than 0")
     private Integer age;
